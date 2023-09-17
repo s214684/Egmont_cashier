@@ -1,0 +1,17 @@
+from datetime import datetime
+from ..egmont_cashier.foodclubs.foodclubinfo import FoodclubInfo  # TODO import doesnt work!
+from egmont_cashier.person import Person
+
+test_person = Person("test", 0, 213)
+
+
+def foodclubinfo_basic_test():
+    # create test date
+    date = datetime(2021, 1, 1)
+    fc_info = FoodclubInfo(date, "test", False, 1000.0, test_person)
+    assert fc_info.id == "fc2021-01-01"
+    assert fc_info.date == date
+    assert fc_info.menu == "test"
+    assert fc_info.is_closed is False
+    assert fc_info.total_price == 1000.0
+    assert fc_info.responsible == test_person
