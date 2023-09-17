@@ -1,0 +1,13 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name='egmont_cashier'
+version='0.0.1'
+description='A cashier system for Egmont'
+readme="README.md"
+authors=[{ name='s214684', email="s214684@dtu.dk" }]
+
+[project.urls]
+homepage='https://github.com/s214684/Egmont_cashier'
